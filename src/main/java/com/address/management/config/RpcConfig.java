@@ -25,6 +25,6 @@ public class RpcConfig {
     @Bean
     public Server server() throws InterruptedException{
         log.info("Starting Server");
-        return new NettyServer(new SpecificResponder(AddressRecords.class, addressRecordSenderImpl), new InetSocketAddress(65110));
+        return new NettyServer(new SpecificResponder(AddressRecords.class, addressRecordSenderImpl), new InetSocketAddress(5000));
     } 
 }
